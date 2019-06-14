@@ -5,7 +5,7 @@
 #### Implemented
 None yet.
 #### Planned
-* `!purge` (Aliases: `!clear` `!wipe`) — Purges a text channel of all messages. Administrative command only.
+* `!purge`, `!clear`, `!wipe` — Purges a text channel of all messages. Administrative command only.
 * `!lore` — For lore-related commands, including managing weekly lore discussions and displaying lore book details.
 ---
 This project is developed and maintained by [@dancreightondev](https://twitter.com/dancreightondev).
