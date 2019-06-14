@@ -3,9 +3,9 @@
 
 ## Commands
 #### Implemented
-* `!help` — Displays a message with details about each command. Type `!help <command>` for more info on a command.
+* `help` — Displays a message with details about each command. Type `!help <command>` for more info on a command.
 #### Planned
-* `!purge`, `!clear`, `!wipe` — Purges a text channel of all messages. Administrative command only.
-* `!lore` — For lore-related commands, including managing weekly lore discussions and displaying lore book details.
+* `purge`, `clear`, `wipe` — Purges a text channel of all messages. Administrative command only.
+* `lore` — For lore-related commands, including managing weekly lore discussions and displaying lore book details.
 ---
 This project is developed and maintained by [@dancreightondev](https://twitter.com/dancreightondev).
