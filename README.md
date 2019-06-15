@@ -17,6 +17,7 @@ Before the bot can be run, you'll need to create a `credentials.json` file in th
 #### In Progress
 * `purge`, `clear`, `wipe`, `prune`
   * Purges a text channel of all messages. Administrative command only.
+  * The bot will require the permissions **Manage Messages** and **Read Message History** for this to work correctly.
 #### Planned
 * `lore`
   * For lore-related commands, including managing weekly lore discussions and displaying lore book details.

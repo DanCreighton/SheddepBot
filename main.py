@@ -23,7 +23,7 @@ async def on_command_error(ctx, error):
     for u in developer_user_ids:
         await bot.get_user(u).send(f"Error in **{ctx.guild.name}** #{ctx.channel.name} ({err})\n\n{msg}\n\nOriginal message:\n{ctx.message.author} — *\"{ctx.message.content}\"*")
     # Notify the user about it
-    await ctx.send("Apologies, Guardian, there was an error with your request. A report has been sent to the developers.")
+    await ctx.send("Apologies, Guardian, an error was encountered. A report has been sent to the developers.")
 
 # Run this code when the bot is ready
 @bot.event
