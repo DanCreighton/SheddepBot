@@ -1,6 +1,15 @@
 # Sheddep Bot
 ***Sheddep Bot is a Discord bot built upon the Pydest API wrapper for Destiny 2. It's main purpose is to assist in the management of the Sheddep clan community and provide a more on-demand way to deliver in-game information to its members.***
 
+Before the bot can be run, you'll need to create a `credentials.json` file in the root directory of this project. This file should contain two things: the Bungie API key and the Discord bot token.
+
+```
+{
+  "api-key": "bungie_api_key_here",
+  "token": "discord_bot_token_here"
+}
+```
+
 ## Commands
 #### Implemented
 * `help <command>`
