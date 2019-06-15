@@ -5,9 +5,10 @@
 #### Implemented
 * `help <command>`
   * Displays a message with details about a command, or lists all commands if not specified.
-#### Planned
+#### In Progress
 * `purge`, `clear`, `wipe`, `prune`
   * Purges a text channel of all messages. Administrative command only.
+#### Planned
 * `lore`
   * For lore-related commands, including managing weekly lore discussions and displaying lore book details.
 ---
