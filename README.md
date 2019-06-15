@@ -15,10 +15,10 @@ Before the bot can be run, you'll need to create a `credentials.json` file in th
 * `help <command>`
   * Displays a message with details about a command, or lists all commands if not specified.
 * `purge <count>`
-  * Purges a text channel of up to 100 messages.
+  * Purges a text channel of up to 100 messages. Administrative use only.
   * The bot will require the permissions **Manage Messages** and **Read Message History** for this to work correctly.
 * `purgechannel`
-  * Completely purges a text channel by cloning it and deleting the old one.
+  * Completely purges a text channel by cloning it and deleting the old one. Administrative use only.
   * The bot will require the permissions **Manage Messages** and **Manage Channels** for this to work correctly.
 #### Planned
 * `lore`
