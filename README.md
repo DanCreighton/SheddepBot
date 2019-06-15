@@ -14,7 +14,6 @@ Before the bot can be run, you'll need to create a `credentials.json` file in th
 #### Implemented
 * `help <command>`
   * Displays a message with details about a command, or lists all commands if not specified.
-#### In Progress
 * `purge <count>`
   * Purges a text channel of up to 100 messages.
   * The bot will require the permissions **Manage Messages** and **Read Message History** for this to work correctly.
