@@ -1,3 +1,4 @@
+import sys
 import discord
 from discord.ext import commands
 
@@ -6,13 +7,22 @@ class Admin(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command(name="purge", aliases=["clear", "wipe", "prune"], hidden=True)
+    @commands.command(name="purge", hidden=True)
     @commands.has_role("Admin")
-    async def purge(self, ctx):
-        """Purges a text channel of all messages, with the exception of pinned messages."""
-        await ctx.message.channel.purge(limit=None, check=lambda msg: not msg.pinned, bulk=True)
-        success = await ctx.send("Channel purged.")
-        await ctx.
+    async def purge(self, ctx, *, messages: int=100):
+        """Purges up to 100 messages per command execution."""
+        count = await ctx.channel.purge(limit=messages)
+        message = await ctx.send(f"Purged {len(count)} messages.")
+        await message.delete(delay=5)
+
+    @commands.command(name="purgechannel", hidden=True)
+    @commands.has_role("Admin")
+    async def purgechannel(self, ctx):
+        """Clones a channel with the same name and deletes the old one."""
+        newchannel = await ctx.channel.clone(name=ctx.channel.name, reason=sys._getframe().f_code.co_name)
+        oldchannel = await ctx.channel.delete(reason=sys._getframe().f_code.co_name)
+        message = await newchannel.send("Channel purged. Don't forget to move this channel back to where it belongs, Guardian.")
+        await message.delete(delay=10)
 
 def setup(bot):
     bot.add_cog(Admin(bot))

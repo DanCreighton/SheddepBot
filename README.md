@@ -15,9 +15,12 @@ Before the bot can be run, you'll need to create a `credentials.json` file in th
 * `help <command>`
   * Displays a message with details about a command, or lists all commands if not specified.
 #### In Progress
-* `purge`, `clear`, `wipe`, `prune`
-  * Purges a text channel of all messages. Administrative command only.
+* `purge <count>`
+  * Purges a text channel of up to 100 messages.
   * The bot will require the permissions **Manage Messages** and **Read Message History** for this to work correctly.
+* `purgechannel`
+  * Completely purges a text channel by cloning it and deleting the old one.
+  * The bot will require the permissions **Manage Messages** and **Manage Channels** for this to work correctly.
 #### Planned
 * `lore`
   * For lore-related commands, including managing weekly lore discussions and displaying lore book details.
