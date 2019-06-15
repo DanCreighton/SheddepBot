@@ -20,4 +20,4 @@ if __name__ == '__main__':
     for extension in startup_extensions:
         bot.load_extension(extension)
 
-bot.run('NTc0MjI1MDAwNDU0Njg0Njcy.XQQg9g.80vEzLMm4DYnALDbTFeHYiMSRug', bot=True, reconnect=True)
+bot.run(TOKEN, bot=True, reconnect=True)
