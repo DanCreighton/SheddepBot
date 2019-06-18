@@ -3,7 +3,8 @@ import discord
 from discord.ext import commands
 
 # Specify the extensions (cogs) to load when the bot starts up
-startup_extensions = ["cogs.admin"]
+startup_extensions = ["cogs.admin",
+                      "cogs.general"]
 
 # Specify the users to notify about potential errors
 developer_user_ids = [226030198095740929]
@@ -31,7 +32,8 @@ async def on_ready():
     ### https://discordpy.readthedocs.io/en/latest/api.html#discord.on_ready ###
     print(f'Logged in as {bot.user.name} (ID: {bot.user.id}) successfully\nDiscord.py version {discord.__version__}\n')
     # Change bot presence
-    await bot.change_presence(activity=discord.Activity(type=2, name="commands"))
+    await bot.change_presence(activity=discord.Activity(type=2, # "Listening to"
+                              name="commands"))
     print(f'Changed presence to \"Listening to commands\"')
 
 # Load cogs
