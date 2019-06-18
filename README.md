@@ -16,8 +16,10 @@ Additionally, you should install the prerequisite dependencies via `pip` on the 
 This project relies on several dependencies to function correctly. Run the following commands to install them.
 * Arrow
   * `python -m pip install -U arrow`
+  * Used for the bot's time calculations.
 * Pydest
   * `python -m pip install -U pydest`
+  * Used to retrieve data from the Destiny 2 API.
 
 ## Commands
 #### Implemented
