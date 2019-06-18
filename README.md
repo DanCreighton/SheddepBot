@@ -24,14 +24,14 @@ This project relies on several dependencies to function correctly. Run the follo
 * `help <command>`
   * Displays a message with details about a command, or lists all commands if not specified.
 * `purge <count>`
-  * Purges a text channel of up to 100 messages. Administrative use only.
+  * Purges up to 100 messages per command execution. Administrative use only.
   * The bot will require the permissions **Manage Messages** and **Read Message History** for this to work correctly.
 * `purgechannel`
   * Completely purges a text channel by cloning it and deleting the old one. Administrative use only.
   * The bot will require the permissions **Manage Messages** and **Manage Channels** for this to work correctly.
 #### In Progress
 * `timezone <name> [time]`
-  * Returns the current time in a specified timezone. If a time is specified, it will return the equivalent time to that instead.
+  * Returns the current time in a specified timezone. If a time is specified, it will return the specified time in that timezone instead.
 #### Planned
 * `lore`
   * For lore-related commands, including managing weekly lore discussions and displaying lore book details.
