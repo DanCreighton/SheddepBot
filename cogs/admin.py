@@ -11,8 +11,8 @@ class Admin(commands.Cog):
     @commands.has_role("Admin")
     async def purge(self, ctx, *, messages: int=100):
         """Purges up to 100 messages per command execution. Administrative use only."""
-        count = await ctx.channel.purge(limit=messages)
-        message = await ctx.send(f"Purged {len(count)} messages.")
+        count = await ctx.channel.purge(limit=messages+1)
+        message = await ctx.send(f"Purged {len(count)-1} messages.")
         await message.delete(delay=5)
 
     @commands.command(name="purgechannel", hidden=True)
