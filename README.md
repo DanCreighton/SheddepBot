@@ -10,6 +10,15 @@ Before the bot can be run, you'll need to create a `credentials.json` file in th
 }
 ```
 
+Additionally, you should install the prerequisite dependencies via `pip` on the host system before attempting to run Sheddep Bot - more information on this can be found below.
+
+## Dependencies
+This project relies on several dependencies to function correctly. Run the following commands to install them.
+* Arrow
+  * `python -m pip install -U arrow`
+* Pydest
+  * `python -m pip install -U pydest`
+
 ## Commands
 #### Implemented
 * `help <command>`
