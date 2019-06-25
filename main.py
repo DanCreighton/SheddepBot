@@ -50,9 +50,8 @@ if __name__ == '__main__':
         bot.load_extension(extension)
 
 # Read credentials.json
-with open("credentials.json", "r") as file:
+with open("credentials.json") as file:
     credentials = json.load(file)
-token = credentials["token"]
 
 # Run bot
-bot.run(token, bot=True, reconnect=True)
+bot.run(credentials["token"], bot=True, reconnect=True)
