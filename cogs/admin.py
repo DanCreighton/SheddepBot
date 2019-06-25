@@ -3,7 +3,7 @@ import discord
 from discord.ext import commands
 
 class Admin(commands.Cog):
-    """Administrative commands for managing the server."""
+    """Administrative commands that help to manage the server."""
     def __init__(self, bot):
         self.bot = bot
 
@@ -23,6 +23,29 @@ class Admin(commands.Cog):
         oldchannel = await ctx.channel.delete(reason=sys._getframe().f_code.co_name)
         message = await newchannel.send("Channel purged. Don't forget to move this channel back to where it belongs, Guardian.")
         await message.delete(delay=10)
+
+    @commands.command(name="banword", aliases=["bw"], enabled=False, hidden=True)
+    @commands.has_role("Admin")
+    async def banword(self, ctx):
+        """Bans a specific word from being sent in messages. Administrative use only."""
+        await ctx.send("This command is incomplete.")
+
+    @commands.command(name="unbanword", aliases=["ubw"], enabled=False, hidden=True)
+    @commands.has_role("Admin")
+    async def banword(self, ctx):
+        """Unbans a word that was previously banned with the banword command. Administrative use only."""
+        await ctx.send("This command is incomplete.")
+
+    @commands.command(name="unbanallwords", aliases=["uba"], enabled=False, hidden=True)
+    @commands.has_role("Admin")
+    async def unbanallwords(self, ctx):
+        """Unbans all words previously banned with the `banword` command. Administrative use only."""
+        await ctx.send("This command is incomplete.")
+
+    @commands.command(name="bannedwords", aliases=["bwlist"], enabled=False, hidden=False)
+    async def bannedwords(self, ctx):
+        """Shows a list of words banned with the `banword` command."""
+        await ctx.send("This command is incomplete.")
 
 def setup(bot):
     bot.add_cog(Admin(bot))

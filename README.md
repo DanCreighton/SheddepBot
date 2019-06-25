@@ -34,6 +34,14 @@ This project relies on several dependencies to function correctly. Run the follo
 #### In Progress
 * `timezone <name> [time]`
   * Returns the current time in a specified timezone. If a time is specified, it will return the specified time in that timezone instead.
+* `banword <word>`
+  * Bans a specific word from being sent in messages. Administrative use only.
+* `unbanword <word>`
+  * Unbans a word that was previously banned with the `banword` command. Administrative use only.
+* `unbanallwords`
+  * Unbans all words previously banned with the `banword` command. Administrative use only.
+* `bannedwords`
+  * Shows a list of words banned with the `banword` command.
 #### Planned
 * `lore`
   * For lore-related commands, including managing weekly lore discussions and displaying lore book details.
