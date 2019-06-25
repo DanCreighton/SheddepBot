@@ -20,8 +20,11 @@ bot = commands.Bot(command_prefix="//", description=description)
 async def on_command_error(ctx, error):
     err = type(error).__name__
     msg = error
+    # Check if command exists
+    if err == "CommandNotFound":
+        await ctx.send("I do not recognise that command, Guardian.")
     # Check if command is disabled
-    if err == "DisabledCommand":
+    elif err == "DisabledCommand":
         await ctx.send("This command is disabled.")
     # Otherwise
     else:
