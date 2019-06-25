@@ -504,7 +504,7 @@
     ]
   },
   {
-    "value": "GMT Standard Time",
+    "value": "Greenwich Mean Time",
     "abbr": "GMT",
     "offset": 0,
     "isdst": false,
@@ -530,7 +530,7 @@
     ]
   },
   {
-    "value": "GMT Standard Time",
+    "value": "Greenwich Daylight Savings Time",
     "abbr": "GDT",
     "offset": 1,
     "isdst": true,
