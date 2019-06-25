@@ -32,7 +32,7 @@ class Admin(commands.Cog):
 
     @commands.command(name="unbanword", aliases=["ubw"], enabled=False, hidden=True)
     @commands.has_role("Admin")
-    async def banword(self, ctx):
+    async def unbanword(self, ctx):
         """Unbans a word that was previously banned with the banword command. Administrative use only."""
         await ctx.send("This command is incomplete.")
 
