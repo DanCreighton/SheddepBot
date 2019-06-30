@@ -8,9 +8,7 @@ If you want to run this bot yourself, you'll need to begin by creating a `creden
   "token": "discord_bot_token_here"
 }
 ```
-Additionally, you should install the prerequisite dependencies via `pip` on the host system before attempting to run Sheddep Bot — more information on this can be found under [Dependencies](#dependencies).
-
-You'll also need to create a bot user at the [Discord developer portal](https://discordapp.com/developers/applications/) and invite it to your server with the following permissions:
+Additionally, you should install the prerequisite [dependencies](#dependencies) via PyPI on the host system before attempting to run Sheddep Bot. You'll also need to create a bot user at the [Discord developer portal](https://discordapp.com/developers/applications/) and invite it to your server with the following permissions:
 
 * Manage Channels
 * Manage Messages
@@ -19,12 +17,15 @@ You'll also need to create a bot user at the [Discord developer portal](https://
 These permissions are associated with the functionality of certain commands, as outlined in the [Commands](#commands) section.
 
 ## Dependencies
-This project relies on several dependencies to function correctly. Run the following commands in `cmd` to install them.
-* Arrow
+This project relies on several dependencies to function correctly. Run the following commands in the command line to install or update them.
+* discord.py (v1.2.3)
+  * `python -m pip install -U discord.py`
+  * Provides Discord bot functionality.
+* Arrow (v0.14.2)
   * `python -m pip install -U arrow`
   * Used for the bot's time calculations.
-* Pydest
-  * `python -m pip install -U pydest`
+* Pydest (v0.1.0)
+  * `python -m pip install -U git+https://github.com/jgayfer/pydest`
   * Used to retrieve data from the Destiny 2 API.
 
 ## Commands
@@ -41,7 +42,8 @@ This project relies on several dependencies to function correctly. Run the follo
 |`banword <word>`|Bans a specific word from being sent in messages. Administrative use only.|
 |`unbanword <word>`|Unbans a word that was previously banned with the `banword` command. Administrative use only.|
 |`unbanallwords`|Unbans all words that were previously banned with the `banword` command. Administrative use only.|
-|`bannedwords`|Shows a list of words currently banned with the `banword`command.|
+|`bannedwords`|Shows a list of words currently banned with the `banword` command.|
+|`autopurgechannel <#channel> <duration>`|Marks a channel to have messages be automatically purged when they've existed for a specified amount of time. Administrative use only.|
 ### Planned
 * `lore`
   * For lore-related commands, including managing weekly lore discussions and displaying lore book details.
