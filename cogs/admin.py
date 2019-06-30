@@ -15,7 +15,7 @@ class Admin(commands.Cog):
         message = await ctx.send(f"Purged {len(count)-1} messages.")
         await message.delete(delay=5)
 
-    @commands.command(name="purgechannel", hidden=True)
+    @commands.command(name="purgechannel", aliases=["pc"], hidden=True)
     @commands.has_role("Admin")
     async def purgechannel(self, ctx):
         """Completely purges a text channel by cloning it and deleting the old one. Administrative use only."""
@@ -23,6 +23,12 @@ class Admin(commands.Cog):
         oldchannel = await ctx.channel.delete(reason=sys._getframe().f_code.co_name)
         message = await newchannel.send("Channel purged. Don't forget to move this channel back to where it belongs, Guardian.")
         await message.delete(delay=10)
+
+    @commands.command(name="autopurgechannel", aliases=["autopc"], enabled=False, hidden=True)
+    @commands.has_role("Admin")
+    async def autopurgechannel(self, ctx):
+        """Marks a channel to have messages be automatically purged when they've existed for a specified amount of time. Administrative use only."""
+        await ctx.send("This command is incomplete.")
 
     @commands.command(name="banword", aliases=["bw"], enabled=False, hidden=True)
     @commands.has_role("Admin")
@@ -42,7 +48,7 @@ class Admin(commands.Cog):
         """Unbans all words previously banned with the `banword` command. Administrative use only."""
         await ctx.send("This command is incomplete.")
 
-    @commands.command(name="bannedwords", aliases=["bwlist"], enabled=False, hidden=False)
+    @commands.command(name="bannedwords", aliases=["bwl", "bwlist"], enabled=False, hidden=False)
     async def bannedwords(self, ctx):
         """Shows a list of words banned with the `banword` command."""
         await ctx.send("This command is incomplete.")
